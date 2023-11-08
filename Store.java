@@ -29,7 +29,7 @@ public class Store {
     public Book searchBook(String title){
         Book f = new Book();
             for(int i = 0 ; i<medias.size() ; i++){
-                if(medias.get(i).getTitle()==title) f= (Book) medias.get(i);
+                if(medias.get(i).getTitle()==title&& (medias.get(i).getMediaType().equals("Bestselling Book")||medias.get(i).getMediaType().equals("Book"))) f= (Book) medias.get(i);
             }
         return f;
     }
